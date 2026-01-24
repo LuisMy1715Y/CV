@@ -6,17 +6,41 @@
     <title>CV - Luis Miguel Hernández</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
-            /* Color de fondo oscuro extraído de la imagen */
-            background-color: #0f172a; 
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+        }
+
+        header, section, ul {
+            break-inside: avoid;
+            page-break-inside: avoid;
         }
     </style>
 </head>
+
 <body class="text-slate-200">
 
-    <main class="max-w-4xl mx-auto p-6 md:p-12 bg-white text-slate-800 shadow-2xl my-10 rounded-lg">
+    <div class="max-w-4xl mx-auto px-6 mt-6 text-right">
+        <button 
+            onclick="downloadPDF()"
+            class="relative inline-flex items-center gap-2
+                bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600
+                text-white font-semibold px-6 py-2.5 rounded-xl
+                shadow-lg shadow-indigo-500/30
+                transition-all duration-300 ease-out
+                hover:-translate-y-1 hover:shadow-xl hover:shadow-fuchsia-500/40
+                active:translate-y-0.5 active:shadow-md
+                focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2"
+        >
+            <span>Descargar CV en PDF</span>
+        </button>
+    </div>
+
+    
+    <main id="cv" class="max-w-4xl mx-auto p-6 md:p-12 bg-white text-slate-800 shadow-2xl my-10 rounded-lg">
 
         <header class="border-b border-slate-200 pb-8 mb-8">
             <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Luis Miguel Hernández Suárez</h1>
@@ -44,8 +68,8 @@
             </p>
         </section>
 
-        <section class="mb-10">
-            <h3 class="text-lg font-bold uppercase tracking-wider text-slate-500 mb-6 border-l-4 border-indigo-500 pl-3">Experiencia Laboral</h3>
+        <section>
+             <h3 class="text-lg font-bold uppercase tracking-wider text-slate-500 mb-6 border-l-4 border-indigo-500 pl-3">Experiencia Laboral</h3>
             
             <div class="relative pl-4 md:pl-0">
                 
@@ -64,8 +88,11 @@
                         <li>Capacitación a usuarios finales y documentación de procesos técnicos para escalabilidad.</li>
                     </ul>
                 </div>
+            </div>
+        </section>
 
-                <div class="mb-10">
+        <section class="mb-6">
+            <div class="mb-10">
                     <div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
                         <h4 class="text-xl font-bold text-slate-800">Vendedor Profesional</h4>
                         <span class="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">02/2024 - 12/2024</span>
@@ -78,27 +105,12 @@
                         <li>Asegurar que el proceso de compra sea satisfactorio, desde la selección del producto hasta la entrega.</li>
                     </ul>
                 </div>
-
-                <div class="mb-10">
-                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
-                        <h4 class="text-xl font-bold text-slate-800">Desarrollador Frontend | React.js</h4>
-                        <span class="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">07/2021 - 07/2022</span>
-                    </div>
-                    <div class="text-slate-500 font-medium mb-3">Transporte San Pedro Ltda - Puerto Libertador, Cordoba</div>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-slate-700">
-                        <li>Especializado en el desarrollo de interfaces optimizadas y procesos eficientes.</li>
-                        <li>Experiencia en la creación de aplicaciones web con React.js, mejorando la gestión de rutas y optimización logística.</li>
-                        <li>Desarrollo de interfaces dinámicas y responsivas para una mejor experiencia de usuario.</li>
-                        <li>Implementación de componentes reutilizables y mantenibles con React y CSS Modules.</li>
-                        <li>Uso de React Router para navegación fluida y consumo de APIs REST para automatización de procesos.</li>
-                    </ul>
-                </div>
-            </div>
         </section>
 
         <section class="mb-10">
             <h3 class="text-lg font-bold uppercase tracking-wider text-slate-500 mb-4 border-l-4 border-indigo-500 pl-3">Habilidades Técnicas (Skills)</h3>
             <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded text-sm font-medium border border-slate-200">N8N</span>
                 <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded text-sm font-medium border border-slate-200">JavaScript</span>
                 <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded text-sm font-medium border border-slate-200">TypeScript</span>
                 <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded text-sm font-medium border border-slate-200">HTML & CSS</span>
@@ -149,14 +161,26 @@
         </div>
 
     </main>
-    
-    <footer class="text-center text-slate-400 text-sm pb-10">
+
+    <footer class="text-center text-slate-400 text-sm pb-8">
         <p>&copy; <span id="year"></span> Luis Miguel Hernández. Diseñado con Tailwind CSS.</p>
     </footer>
 
     <script>
-        // Actualiza el año automáticamente
+
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        function downloadPDF() {
+            const element = document.getElementById('cv');
+
+            html2pdf().set({
+                margin: [2, 0, 0, 0],
+                filename: 'CV_Luis_Miguel_Hernandez.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            }).from(element).save();
+        }
     </script>
 
 </body>
