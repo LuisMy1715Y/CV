@@ -79,7 +79,6 @@ Soporte técnico especializado para asistentes de Inteligencia Artificial, diagn
 - C#
 - SQL
 - SQL Server
-- Node.js
 - REST APIs
 - JSON
 
