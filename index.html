@@ -14,1003 +14,37 @@
 
     <!--FUENTE-->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <!--HTML2PDF-->
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
-    </script>
-
-
-    <style>
-        /*RESET*/
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            border-radius: 15px;
-        }
-
-        body {
-            font-family:
-                'Inter',
-                Arial,
-                sans-serif;
-
-            background:
-                #202020;
-
-            color:
-                #334155;
-
-            line-height:
-                1.5;
-        }
-
-        /*BOTÓN PDF*/
-
-        .download-container {
-            max-width:
-                1000px;
-
-            margin:
-                20px auto;
-
-            text-align:
-                right;
-        }
-
-        .download-btn {
-            border:
-                none;
-
-            border-radius:
-                8px;
-
-            padding:
-                10px 18px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #6366f1,
-                    #d946ef
-                );
-
-            color:
-                white;
-
-            font-family:
-                inherit;
-
-            font-size:
-                13px;
-
-            font-weight:
-                700;
-
-            cursor:
-                pointer;
-
-            box-shadow:
-                0 8px 20px
-                rgba(99, 102, 241, 0.25);
-        }
-
-        /*CV*/
-
-        #cv {
-            width:
-                210mm;
-
-            min-height:
-                297mm;
-
-            max-width:
-                100%;
-
-            margin:
-                30px auto;
-
-            padding:
-                18mm 18mm;
-
-            background:
-                #ffffff;
-
-            box-shadow:
-                0 15px 50px
-                rgba(0, 0, 0, 0.35);
-        }
-
-        /*HEADER PRINCIPAL*/
-
-        .header {
-            display:
-                grid;
-
-            grid-template-columns:
-                1fr auto;
-
-            column-gap:
-                35px;
-
-            row-gap:
-                18px;
-
-            padding-bottom:
-                20px;
-
-            margin-bottom:
-                24px;
-
-            border-bottom:
-                1px solid #e2e8f0;
-
-            break-inside:
-                avoid;
-
-            page-break-inside:
-                avoid;
-        }
-
-        /*NOMBRE*/
-
-        .header-main {
-
-            min-width:
-                0;
-        }
-
-        .name {
-            font-size:
-                32px;
-
-            line-height:
-                1.08;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                -1.1px;
-
-            color:
-                #0f172a;
-
-            margin-bottom:
-                7px;
-
-            white-space:
-                nowrap;
-        }
-
-
-        .profession {
-            font-size:
-                17px;
-
-            line-height:
-                1.3;
-
-            font-weight:
-                700;
-
-            color:
-                #6366f1;
-        }
-
-        /*CONTACTO*/
-
-        .contact {
-            display:
-                flex;
-
-            flex-direction:
-                column;
-
-            align-items:
-                flex-end;
-
-            justify-content:
-                center;
-
-            gap:
-                7px;
-
-            min-width:
-                250px;
-
-            font-size:
-                11.5px;
-
-            color:
-                #64748b;
-
-            white-space:
-                nowrap;
-            
-            padding-top:
-                22px;
-        }
-
-        .contact a {
-            color:
-                #6366f1;
-
-            text-decoration:
-                none;
-        }
-
-        /*RESUMEN*/
-
-        .header-summary {
-            grid-column:
-                1 / -1;
-
-            max-width:
-                100%;
-
-            color:
-                #64748b;
-
-            font-size:
-                12.5px;
-
-            line-height:
-                1.65;
-        }
-
-        /*SECCIONES*/
-
-        .section {
-            margin-bottom:
-                28px;
-        }
-
-
-        .section-title {
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            gap:
-                10px;
-
-            margin-bottom:
-                18px;
-
-            color:
-                #475569;
-
-            font-size:
-                16px;
-
-            line-height:
-                1.2;
-
-            font-weight:
-                800;
-
-            text-transform:
-                uppercase;
-
-            letter-spacing:
-                1px;
-
-            break-after:
-                avoid;
-
-            page-break-after:
-                avoid;
-        }
-
-
-        .section-title::before {
-            content:
-                "";
-
-            display:
-                block;
-
-            width:
-                5px;
-
-            height:
-                23px;
-
-            border-radius:
-                5px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    #6366f1,
-                    #d946ef
-                );
-        }
-
-
-        /*EMPRESA*/
-
-        .company {
-            break-inside:
-                auto;
-
-            page-break-inside:
-                auto;
-        }
-
-
-        /*SEPARACIÓN ENTRE EMPRESAS*/
-
-        .company + .company {
-            margin-top:
-                35px;
-
-            padding-top:
-                28px;
-
-            border-top:
-                1px solid #e2e8f0;
-        }
-
-        /*HEADER EMPRESA*/
-
-        .company-header {
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            gap:
-                13px;
-
-            margin-bottom:
-                22px;
-
-            break-inside:
-                avoid !important;
-
-            page-break-inside:
-                avoid !important;
-        }
-
-
-        .company-logo {
-            width:
-                45px;
-
-            height:
-                45px;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            flex-shrink:
-                0;
-
-            border-radius:
-                12px;
-
-            color:
-                #ffffff;
-
-            font-size:
-                14px;
-
-            font-weight:
-                800;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #6366f1,
-                    #d946ef
-                );
-        }
-
-
-        .homecenter-logo {
-            background:
-                linear-gradient(
-                    135deg,
-                    #64748b,
-                    #334155
-                );
-        }
-
-
-        .company-name {
-            color:
-                #0f172a;
-
-            font-size:
-                19px;
-
-            line-height:
-                1.25;
-
-            font-weight:
-                800;
-        }
-
-
-        .company-location {
-            margin-top:
-                2px;
-
-            color:
-                #64748b;
-
-            font-size:
-                11.5px;
-        }
-
-
-        /*EXPERIENCIA*/
-
-        .experience {
-            position:
-                relative;
-
-            margin-left:
-                5px;
-
-            padding-left:
-                27px;
-
-            padding-bottom:
-                27px;
-
-            break-inside:
-                avoid !important;
-
-            page-break-inside:
-                avoid !important;
-        }
-
-        .experience:last-child {
-            padding-bottom:
-                0;
-        }
-
-
-        /* PUNTO */
-
-        .experience::before {
-            content:
-                "";
-
-            position:
-                absolute;
-
-            left:
-                0;
-
-            top:
-                6px;
-
-            width:
-                10px;
-
-            height:
-                10px;
-
-            border-radius:
-                50%;
-
-            background:
-                #6366f1;
-
-            box-shadow:
-                0 0 0 4px
-                rgba(99, 102, 241, 0.10);
-        }
-
-
-        /* LÍNEA */
-
-        .experience:not(:last-child)::after {
-            content:
-                "";
-
-            position:
-                absolute;
-
-            left:
-                4px;
-
-            top:
-                20px;
-
-            bottom:
-                0;
-
-            width:
-                2px;
-
-            background:
-                #d8d9f5;
-        }
-
-
-        /*CARGO*/
-
-        .experience-header {
-            display:
-                flex;
-
-            justify-content:
-                space-between;
-
-            align-items:
-                flex-start;
-
-            gap:
-                15px;
-
-            margin-bottom:
-                5px;
-
-            break-inside:
-                avoid !important;
-
-            page-break-inside:
-                avoid !important;
-        }
-
-        .job-title {
-            color:
-                #1e293b;
-
-            font-size:
-                17px;
-
-            line-height:
-                1.3;
-
-            font-weight:
-                800;
-        }
-
-        .date {
-            flex-shrink:
-                0;
-
-            padding:
-                4px 10px;
-
-            border-radius:
-                20px;
-
-            background:
-                #eef2ff;
-
-            color:
-                #6366f1;
-
-            font-size:
-                10.5px;
-
-            font-weight:
-                700;
-
-            white-space:
-                nowrap;
-        }
-
-        /*CATEGORÍA*/
-
-        .job-category {
-            margin-bottom:
-                9px;
-
-            color:
-                #7c3aed;
-
-            font-size:
-                11px;
-
-            font-weight:
-                700;
-        }
-
-        /*FUNCIONES*/
-
-        .experience-list {
-            padding-left:
-                18px;
-
-            color:
-                #64748b;
-
-            font-size:
-                11.8px;
-
-            line-height:
-                1.55;
-        }
-
-
-        .experience-list li {
-            margin-bottom:
-                5px;
-        }
-
-        .experience-list li:last-child {
-            margin-bottom:
-                0;
-        }
-
-        /*HOMECENTER*/
-
-        .homecenter-company .experience::before {
-            background:
-                #94a3b8;
-
-            box-shadow:
-                0 0 0 4px
-                rgba(148, 163, 184, 0.10);
-        }
-
-        .homecenter-company
-        .experience:not(:last-child)::after {
-            background:
-                #cbd5e1;
-        }
-
-        .homecenter-company
-        .job-category {
-            color:
-                #64748b;
-        }
-
-        /*HABILIDADES*/
-
-        .skills {
-            display:
-                flex;
-
-            flex-wrap:
-                wrap;
-
-            gap:
-                6px;
-        }
-
-        .skill {
-            padding:
-                5px 9px;
-
-            border:
-                1px solid #e2e8f0;
-
-            border-radius:
-                6px;
-
-            background:
-                #f8fafc;
-
-            color:
-                #475569;
-
-            font-size:
-                10.5px;
-
-            font-weight:
-                600;
-        }
-
-        .skill.primary {
-            border-color:
-                #c7d2fe;
-
-            background:
-                #eef2ff;
-
-            color:
-                #4f46e5;
-        }
-
-        /*EDUCACIÓN / CERTIFICACIONES*/
-
-        .bottom-grid {
-            display:
-                grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap:
-                40px;
-
-            margin-top:
-                5px;
-        }
-
-        .education-item {
-            margin-bottom:
-                15px;
-
-            break-inside:
-                avoid !important;
-
-            page-break-inside:
-                avoid !important;
-        }
-
-        .education-title {
-            color:
-                #1e293b;
-
-            font-size:
-                13px;
-
-            font-weight:
-                800;
-
-            margin-bottom:
-                2px;
-        }
-
-        .education-school {
-            color:
-                #64748b;
-
-            font-size:
-                10.5px;
-        }
-
-        .education-date {
-            color:
-                #6366f1;
-
-            font-size:
-                10px;
-
-            margin-top:
-                2px;
-        }
-
-        .education-description {
-            color:
-                #64748b;
-
-            font-size:
-                10px;
-
-            margin-top:
-                3px;
-        }
-
-        .certification {
-            display:
-                flex;
-
-            justify-content:
-                space-between;
-
-            gap:
-                10px;
-
-            padding-bottom:
-                7px;
-
-            margin-bottom:
-                7px;
-
-            border-bottom:
-                1px solid #f1f5f9;
-
-            break-inside:
-                avoid !important;
-
-            page-break-inside:
-                avoid !important;
-        }
-
-        .certification-name {
-            color:
-                #475569;
-
-            font-size:
-                10.5px;
-
-            font-weight:
-                600;
-        }
-
-        .certification-date {
-            color:
-                #94a3b8;
-
-            font-size:
-                9px;
-
-            white-space:
-                nowrap;
-        }
-
-        /*FOOTER*/
-
-        footer {
-            max-width:
-                1000px;
-
-            margin:
-                0 auto;
-
-            padding:
-                0 20px 20px;
-
-            text-align:
-                center;
-
-            color:
-                #94a3b8;
-
-            font-size:
-                11px;
-        }
-
-        /*RESPONSIVE*/
-
-        @media (max-width: 800px) {
-            #cv {
-
-                width:
-                    calc(100% - 24px);
-
-                min-height:
-                    auto;
-
-                padding:
-                    30px 24px;
-            }
-
-            .header {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .name {
-                white-space:
-                    normal;
-
-                font-size:
-                    31px;
-            }
-
-            .contact {
-                align-items:
-                    flex-start;
-
-                min-width:
-                    auto;
-            }
-
-            .experience-header {
-                flex-direction:
-                    column;
-            }
-
-            .bottom-grid {
-                grid-template-columns:
-                    1fr;
-            }
-        }
-
-        /*IMPRESIÓN / PDF*/
-
-        @media print {
-            @page {
-
-                size:
-                    A4;
-
-                margin:
-                    0;
-            }
-
-            body {
-
-                background:
-                    #ffffff;
-            }
-
-            .download-container,
-            footer {
-
-                display:
-                    none !important;
-            }
-
-            #cv {
-
-                width:
-                    210mm;
-
-                min-height:
-                    297mm;
-
-                margin:
-                    0;
-
-                padding:
-                    16mm 17mm;
-
-                box-shadow:
-                    none;
-            }
-
-            .experience {
-
-                break-inside:
-                    avoid !important;
-
-                page-break-inside:
-                    avoid !important;
-            }
-
-            .company-header {
-
-                break-inside:
-                    avoid !important;
-
-                page-break-inside:
-                    avoid !important;
-            }
-
-            .experience-header {
-
-                break-inside:
-                    avoid !important;
-
-                page-break-inside:
-                    avoid !important;
-            }
-
-            .education-item,
-            .certification {
-
-                break-inside:
-                    avoid !important;
-
-                page-break-inside:
-                    avoid !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!--BOTÓN-->
-
-    <div class="download-container">
-        <button
-            class="download-btn"
-            onclick="downloadPDF()"
-        >
-            📄 Descargar CV en PDF
-        </button>
-    </div>
-
     <!--CV-->
 
     <main id="cv">
+        <!--BOTÓN-->
+
+        <div class="download-container">
+            <button
+                class="download-btn"
+                onclick="downloadPDF()"
+                aria-label="Descargar CV en PDF"
+                title="Descargar CV en PDF"
+            >
+                <svg
+                    class="download-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" />
+                </svg>
+                <span class="download-text">Descargar CV en PDF</span>
+            </button>
+        </div>
+
         <!--HEADER-->
 
         <header class="header">
@@ -1066,11 +100,13 @@
 
             <!--LUCIDBOT-->
 
-            <div class="company">
+            <div class="company current-company">
                 <div class="company-header">
-                    <div class="company-logo">
-                        LB
-                    </div>
+                    <img
+                        class="company-logo lucidbot-logo"
+                        src="images/lucidbot-logo.png"
+                        alt="Logo de LucidBot"
+                    >
 
                     <div>
                         <div class="company-name">
@@ -1085,7 +121,7 @@
 
                 <!-- SUPERVISOR -->
 
-                <div class="experience">
+                <div class="experience current-role">
                     <div class="experience-header">
                         <h4 class="job-title">
                             Supervisor del Área de Soporte Técnico
@@ -1222,9 +258,11 @@
             <div class="company">
 
                 <div class="company-header">
-                    <div class="company-logo homecenter-logo">
-                        HC
-                    </div>
+                    <img
+                        class="company-logo homecenter-logo"
+                        src="images/homecenter-logo.png"
+                        alt="Logo de Homecenter"
+                    >
 
                     <div>
                         <div class="company-name">
@@ -1286,32 +324,32 @@
 
         <section class="section">
             <h3 class="section-title">
-                Habilidades Técnicas
+                Habilidades
             </h3>
 
             <div class="skills">
-                <span class="skill">
-                    Inteligencia Artificial
-                </span>
-
-                <span class="skill">
-                    Prompt Engineering
-                </span>
-
-                <span class="skill">
-                    Automatización
-                </span>
-
-                <span class="skill">
-                    JSON
+                <span class="skill primary">
+                    HTML
                 </span>
 
                 <span class="skill primary">
-                    APIs REST
+                    CSS
                 </span>
 
                 <span class="skill primary">
                     JavaScript
+                </span>
+
+                <span class="skill">
+                    C#
+                </span>
+
+                <span class="skill">
+                    n8n
+                </span>
+
+                <span class="skill">
+                    Astro
                 </span>
 
                 <span class="skill primary">
@@ -1319,36 +357,19 @@
                 </span>
 
                 <span class="skill primary">
-                    TypeScript
-                </span>
-
-                <span class="skill primary">
                     Next.js
                 </span>
 
-                <span class="skill">
-                    Astro
+                <span class="skill primary">
+                    TypeScript
                 </span>
-
 
                 <span class="skill">
                     Tailwind CSS
                 </span>
 
                 <span class="skill">
-                    Git
-                </span>
-
-                <span class="skill">
                     GitHub
-                </span>
-
-                <span class="skill">
-                    Soporte Técnico
-                </span>
-
-                <span class="skill">
-                    Resolución de Problemas
                 </span>
             </div>
         </section>
@@ -1436,120 +457,7 @@
 
 
     <!--JAVASCRIPT-->
-    <script>
-
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
-
-        function downloadPDF() {
-
-            const element =
-                document.getElementById("cv");
-
-            const button =
-                document.querySelector(".download-btn");
-
-            const originalText =
-                button.innerHTML;
-
-            button.innerHTML =
-                "⏳ Generando PDF...";
-
-            button.disabled =
-                true;
-
-            const options = {
-                margin: [
-                    7, 7, 7, 7
-                ],
-
-                filename:
-                    "CV_Luis_Miguel_Hernandez.pdf",
-
-                image: {
-
-                    type:
-                        "jpeg",
-
-                    quality:
-                        0.98
-
-                },
-
-                html2canvas: {
-
-                    scale:
-                        2,
-
-                    useCORS:
-                        true,
-
-                    scrollY:
-                        0,
-
-                    backgroundColor:
-                        "#ffffff"
-                },
-
-                jsPDF: {
-
-                    unit:
-                        "mm",
-
-                    format:
-                        "a4",
-
-                    orientation:
-                        "portrait",
-
-                    compress:
-                        true
-                },
-
-                pagebreak: {
-                    mode: [
-                        "css",
-                        "legacy"
-                    ],
-                    avoid: [
-                        ".experience",
-                        ".company-header",
-                        ".experience-header",
-                        ".education-item",
-                        ".certification"
-                    ]
-                }
-            };
-
-            html2pdf()
-                .set(options)
-                .from(element)
-                .save()
-                .then(() => {
-                    button.innerHTML =
-                        originalText;
-
-                    button.disabled =
-                        false;
-                })
-
-                .catch((error) => {
-
-                    console.error(error);
-
-                    button.innerHTML =
-                        originalText;
-
-                    button.disabled =
-                        false;
-
-                    alert(
-                        "Ocurrió un error al generar el PDF."
-                    );
-
-                });
-        }
-    </script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
