@@ -1040,31 +1040,6 @@
             padding: 3px;
         }
 
-        .current-company {
-            color: var(--ink);
-        }
-
-        .current-company .company-name {
-            color: var(--ink);
-            font-weight: 800;
-        }
-
-        .current-role .job-title {
-            color: #6f4aae;
-            font-weight: 800;
-        }
-
-        .current-role .date {
-            border: 1px solid rgba(214, 93, 177, 0.32);
-            background: #f9edf6;
-            color: #a13b83;
-        }
-
-        .current-role .job-category {
-            color: #a13b83;
-            font-weight: 700;
-        }
-
         .download-btn {
             position: relative;
             display: inline-flex;
