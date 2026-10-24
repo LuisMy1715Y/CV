@@ -2,9 +2,9 @@
 
 **Desarrollador de Software Junior** — Construyo interfaces web claras y las APIs que las respaldan.
 
-Hoja de vida web, lista para imprimir en A4, con el mismo sistema visual de mi [portafolio](https://portafolio-web-topaz.vercel.app/).
+Hoja de vida web, lista para imprimir en A4, con el mismo sistema visual de mi [portafolio](https://portafolioweb-wine.vercel.app/).
 
-[**Ver CV en línea**](https://cv-one-gilt.vercel.app/) · [Portafolio](https://portafolio-web-topaz.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/luismy1517y/) · [GitHub](https://github.com/LuisMy1715Y)
+[**Ver CV en línea**](https://cv-one-gilt.vercel.app/) · [Portafolio](https://portafolioweb-wine.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/luismy1517y/) · [GitHub](https://github.com/LuisMy1715Y)
 
 ![Vista previa del CV](docs/preview.png)
 
@@ -60,7 +60,7 @@ Luego entra a <http://localhost:5510> y usa **Descargar PDF**. En el diálogo de
 ## Contacto
 
 - **Email:** [hernandezsuarezluismiguel@gmail.com](mailto:hernandezsuarezluismiguel@gmail.com)
-- **Portafolio:** [portafolio-web-topaz.vercel.app](https://portafolio-web-topaz.vercel.app/)
+- **Portafolio:** [portafolioweb-wine.vercel.app](https://portafolioweb-wine.vercel.app/)
 - **LinkedIn:** [in/luismy1517y](https://www.linkedin.com/in/luismy1517y/)
 - **GitHub:** [LuisMy1715Y](https://github.com/LuisMy1715Y)
 
