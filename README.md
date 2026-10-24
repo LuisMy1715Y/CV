@@ -1,182 +1,69 @@
-# 👋 Hola, soy Luis Miguel Hernández Suárez
+# `>_` CV · Luis Miguel Hernández Suárez
 
-### Junior Software Developer | AI & Automation
+**Desarrollador de Software Junior** — Construyo interfaces web claras y las APIs que las respaldan.
 
-Ingeniero de Software en formación con experiencia práctica en desarrollo de software, soporte técnico, implementación de soluciones con inteligencia artificial y automatización de procesos.
+Hoja de vida web, lista para imprimir en A4, con el mismo sistema visual de mi [portafolio](https://portafolio-web-topaz.vercel.app/).
 
-Actualmente enfocado en construir soluciones eficientes, escalables y orientadas a las necesidades del negocio.
+[**Ver CV en línea**](https://cv-one-gilt.vercel.app/) · [Portafolio](https://portafolio-web-topaz.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/luismy1517y/) · [GitHub](https://github.com/LuisMy1715Y)
 
----
-
-## 👨‍💻 Sobre mí
-
-- 💻 Desarrollo de software y aplicaciones web.
-- 🤖 Implementación de soluciones basadas en Inteligencia Artificial.
-- ⚙️ Automatización de procesos y flujos de trabajo.
-- 🔌 Integración de servicios mediante APIs REST.
-- 🧩 Diseño y optimización de flujos conversacionales.
-- 🛠️ Soporte técnico y resolución de problemas.
-- 📈 Interés en soluciones escalables y mejora continua.
+![Vista previa del CV](docs/preview.png)
 
 ---
 
-## 💼 Experiencia
+## Características
 
-### LucidBot
+- **Exportación a PDF** desde el botón *Descargar PDF*: usa la impresión del navegador con estilos dedicados para A4, sin barra superior, sombras ni cortes dentro de cada cargo.
+- **Diseño responsive** para escritorio, tablet y celular, sin desbordes horizontales.
+- **Identidad del portafolio**: acento verde menta, tipografía Onest con detalles monoespaciados y tokens de diseño compartidos (color, radios, tipografía).
+- **HTML semántico y accesible**: secciones con encabezados, listas reales para habilidades y etiquetas, `aria-label` en las acciones y foco visible.
+- **Sin dependencias ni build**: HTML, CSS y un poco de JavaScript.
 
-**Supervisor del Área de Soporte Técnico**  
-`Febrero 2026 - Actualidad`
+## Contenido
 
-Liderazgo y supervisión del equipo de soporte técnico, seguimiento de incidencias y aseguramiento de la calidad del servicio.
+| Sección | Qué incluye |
+| --- | --- |
+| Experiencia | LucidBot (soporte, implementación de IA y supervisión) y Homecenter Sodimac |
+| Proyectos | LucidRealtor, Novition y Portafolio Web |
+| Habilidades | Frontend, Backend y APIs, Herramientas |
+| Educación | Ingeniería de Software — I.U. Pascual Bravo |
+| Certificaciones | LucidAcademy, React, Next.js y Desarrollo Frontend |
 
-También participo en la capacitación de nuevos especialistas, evaluación técnica durante procesos de selección y desarrollo de implementaciones personalizadas de asistentes de Inteligencia Artificial para diferentes clientes.
+## Tecnologías
 
----
+![HTML5](https://img.shields.io/badge/HTML5-111113?style=flat-square&logo=html5&logoColor=3ddc97)
+![CSS3](https://img.shields.io/badge/CSS3-111113?style=flat-square&logo=css&logoColor=3ddc97)
+![JavaScript](https://img.shields.io/badge/JavaScript-111113?style=flat-square&logo=javascript&logoColor=3ddc97)
+![Vercel](https://img.shields.io/badge/Vercel-111113?style=flat-square&logo=vercel&logoColor=3ddc97)
 
-**Implementador de Procesos Automatizados con IA**  
-`Octubre 2025 - Enero 2026`
+## Estructura
 
-Desarrollo e implementación de asistentes de Inteligencia Artificial desde cero, configuración y optimización de prompts, diseño de flujos conversacionales e integración de servicios externos mediante APIs REST.
+```text
+.
+├── index.html      # Contenido del CV
+├── styles.css      # Tokens, layout, responsive e impresión
+├── script.js       # Año del footer y descarga en PDF
+├── images/         # Logos de empresas
+└── docs/
+    └── preview.png # Captura usada en este README
+```
 
----
+## Uso local
 
-**Especialista en Soporte**  
-`Mayo 2025 - Septiembre 2025`
+No necesita instalación. Abre `index.html` en el navegador o sírvelo con cualquier servidor estático:
 
-Soporte técnico especializado para asistentes de Inteligencia Artificial, diagnóstico y resolución de incidencias, optimización de prompts y configuración de flujos conversacionales.
+```bash
+python -m http.server 5510
+```
 
----
+Luego entra a <http://localhost:5510> y usa **Descargar PDF**. En el diálogo de impresión elige *Guardar como PDF*, tamaño A4 y desactiva *Encabezados y pies de página*.
 
-## 🧠 Áreas de especialización
+## Contacto
 
-| Área                    | Enfoque                                             |
-| ----------------------- | --------------------------------------------------- |
-| Software Development    | Desarrollo de aplicaciones y soluciones de software |
-| Frontend Development    | Interfaces web modernas y responsivas               |
-| Artificial Intelligence | Implementación de asistentes y soluciones con IA    |
-| Process Automation      | Automatización de procesos y flujos                 |
-| API Integration         | Integración de servicios mediante APIs REST         |
-| Prompt Engineering      | Diseño y optimización de prompts                    |
-| Technical Support       | Diagnóstico y resolución de problemas               |
-| Scalable Solutions      | Diseño de soluciones eficientes y mantenibles       |
-
----
-
-## 🛠️ Tecnologías
-
-### Frontend
-
-- JavaScript
-- TypeScript
-- React
-- Astro
-- Tailwind CSS
-- HTML5
-- CSS3
-
-### Backend & Development
-
-- C#
-- SQL
-- SQL Server
-- REST APIs
-- JSON
-
-### Artificial Intelligence & Automation
-
-- Inteligencia Artificial
-- Prompt Engineering
-- Asistentes virtuales
-- Automatización de procesos
-- Flujos conversacionales
-- Integración de APIs
-
-### Herramientas
-
-- Git
-- GitHub
-- Vercel
-- Visual Studio Code
-- Postman
+- **Email:** [hernandezsuarezluismiguel@gmail.com](mailto:hernandezsuarezluismiguel@gmail.com)
+- **Portafolio:** [portafolio-web-topaz.vercel.app](https://portafolio-web-topaz.vercel.app/)
+- **LinkedIn:** [in/luismy1517y](https://www.linkedin.com/in/luismy1517y/)
+- **GitHub:** [LuisMy1715Y](https://github.com/LuisMy1715Y)
 
 ---
 
-## 🚀 Proyectos destacados
-
-### 💻 Portafolio Web
-
-Portafolio personal desarrollado para presentar mi experiencia, proyectos, habilidades y trayectoria profesional.
-
-**Tecnologías:** HTML, CSS, JavaScript, Astro, Tailwind CSS.
-
----
-
-### 📄 CV Interactivo
-
-Currículum Vitae interactivo desarrollado con enfoque en diseño web, experiencia profesional y presentación de habilidades técnicas.
-
-**Tecnologías:** HTML, CSS, Tailwind CSS, JavaScript.
-
----
-
-### 📝 Noviton Clone
-
-Proyecto inspirado en herramientas de productividad y gestión de información, enfocado en crear una experiencia moderna y organizada.
-
-**Tecnologías:** TypeScript.
-
----
-
-## 🎯 Actualmente enfocado en
-
-**Software Development**  
-↓  
-**Frontend Development**  
-↓  
-**Artificial Intelligence**  
-↓  
-**Process Automation**  
-↓  
-**API Integration**  
-↓  
-**Scalable Solutions**
-
----
-
-## 📚 Formación
-
-### Ingeniería de Software
-
-**Institución Universitaria Pascual Bravo**
-
-Formación orientada al desarrollo de software, programación, bases de datos, arquitectura de sistemas y construcción de soluciones tecnológicas.
-
----
-
-## 📫 Contacto
-
-**Email:**  
-hernandezsuarezluismiguel@gmail.com
-
-**Portfolio:**  
-https://portafolio-web-topaz.vercel.app/
-
-**LinkedIn:**  
-https://www.linkedin.com/in/luismy1517y/
-
-**GitHub:**  
-https://github.com/LuisMy1715Y
-
----
-
-## 💡 Filosofía
-
-> Si un proceso puede mejorarse, puede automatizarse.
-
-Me interesa transformar problemas reales en soluciones tecnológicas simples, eficientes y escalables.
-
----
-
-### Gracias por visitar mi perfil 👋
-
-Siempre estoy interesado en aprender, construir y participar en nuevos proyectos tecnológicos.
+<sub>`>_` Busco mi próximo rol como desarrollador junior. Si te interesa mi perfil, escríbeme.</sub>
